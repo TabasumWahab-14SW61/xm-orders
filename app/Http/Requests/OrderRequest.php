@@ -32,7 +32,7 @@ class OrderRequest extends FormRequest
                 new Currency(),         // VALID ISO 4217 CURRENCY VALIDATION
                 Rule::in(array_values(config('constants.CURRENCIES'))),
             ],
-            'email' => 'required|email',
+            'email' => 'required|email|email:rfc|email:dns',
         ];
     }
 }

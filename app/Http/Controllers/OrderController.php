@@ -64,6 +64,7 @@ class OrderController extends Controller
         } catch (\Exception $e) {
             // EXCEPTION // RETURN BACK WITH ERROR MESSAGE
             Session::flash('error', $e->getMessage());
+            
             return redirect()->back();
         }
     }
